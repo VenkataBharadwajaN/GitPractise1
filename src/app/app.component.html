@@ -1,7 +1,39 @@
-<h1 class="display-3 bg-success text-white p-3 text-center">Header Section</h1>
+
+
+<h1 class="bg-success text-white p-3 text-center display-3 mb-0">Header Section</h1>
+
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="home" routerLinkActive="active">BJ-Store</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0 ms-auto" >
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" routerLink="home" routerLinkActive="active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="login" routerLinkActive="active">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="registration" routerLinkActive="active">Registration</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="contactus" routerLinkActive="active">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="products" routerLinkActive="active">Products</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
 <div class="container">
   <div class="row">
-    <app-product></app-product>
+    <router-outlet></router-outlet>
   </div>
 </div>
+
 <app-footer></app-footer>
