@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TransferdataService } from '../transferdata.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  num=true;
+  constructor(private transferData:TransferdataService) {
 
-  ngOnInit(): void {
+   }
+
+  ngOnInit(): void 
+  {
+    this.transferData.setData(this.num);
   }
 
 }

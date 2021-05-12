@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TransferdataService } from '../transferdata.service';
 
 @Component({
   selector: 'app-contactus',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactusComponent implements OnInit {
 
-  constructor() { }
+  value;
+  constructor(private transferData:TransferdataService) 
+  {
+  }
 
-  ngOnInit(): void {
+  ngOnInit(): void 
+  {
+    this.value=this.transferData.getData();
   }
 
 }
