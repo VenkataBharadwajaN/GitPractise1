@@ -11,6 +11,7 @@ export class ContactusComponent implements OnInit {
   value;
   constructor(private transferData:TransferdataService) 
   {
+    
   }
 
   ngOnInit(): void 
