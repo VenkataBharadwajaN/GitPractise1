@@ -10,15 +10,45 @@ import { Product } from '../models/product.modal';
 export class MobilesComponent implements OnInit{
 
   products:Product[]=[];
+  a=100;
   constructor(private dsObj:DataService)
     {
+      
     }
 
     ngOnInit()
   {
-      this.products=this.dsObj.getMobilesdata();
-
+      this.dsObj.getMobilesdata().subscribe(
+        data=>
+        {
+          console.log(this.products);
+          this.products=data;
+          console.log(this.products);
+        },
+        err=>
+        {
+          console.log("Error is",err);
+        }
+      );
   }
+
+  //   ngOnInit()
+  // {
+  //     this.dsObj.getMobilesdata().subscribe(function(data)
+  //       {
+  //         console.log("Entered");
+  //         console.log(data);
+  //         console.log(this.products);
+  //         this.products=data;
+  //         console.log("After",this.products);
+  //       },
+  //       function(err)
+  //       {
+  //         console.log("Error is",err);
+  //       },
+  //     );
+  //     console.log('Hello',this.products)
+  // }
 
   // products:Product[]=[
 

@@ -8,7 +8,7 @@ export class BikeDataService {
 
   constructor() { }
   products:Product[]=[
-
+    
     {
     productTitle:"Bike-1",
     description:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore amet dolor iusto",
