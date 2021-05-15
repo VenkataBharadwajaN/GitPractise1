@@ -6,7 +6,7 @@ import { FakedataService } from '../fakedata.service';
   templateUrl: './test.component.html',
   styleUrls: ['./test.component.css']
 })
-export class TestComponent implements OnInit,OnDestroy {
+export class TestComponent implements OnInit {
 
   mySubscription:any;
   posts=[]
@@ -15,30 +15,30 @@ export class TestComponent implements OnInit,OnDestroy {
    }
   users:any;
 
-  // ngOnInit(): void 
-  // {
-  //   this.fsObj.getPosts().subscribe(data=>{
-  //     this.posts=data;
-  //   },
-  //   err=>{
-  //     console.log("Error is ",err)
-  //   });
-  // }
-
   ngOnInit(): void 
   {
-    this.mySubscription=this.fsObj.getUsers().subscribe(
-      data=>{
-      this.users=data;
+    this.fsObj.getPosts().subscribe(data=>{
+      this.posts=data;
     },
     err=>{
       console.log("Error is ",err)
     });
   }
 
-  ngOnDestroy()
-  {
-    this.mySubscription.unsubscribe();
-  }
+  // ngOnInit(): void 
+  // {
+  //   this.mySubscription=this.fsObj.getUsers().subscribe(
+  //     data=>{
+  //     this.users=data;
+  //   },
+  //   err=>{
+  //     console.log("Error is ",err)
+  //   });
+  // }
+
+  // ngOnDestroy()
+  // {
+  //   this.mySubscription.unsubscribe();
+  // }
 
 }
