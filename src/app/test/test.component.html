@@ -1,0 +1,35 @@
+<!-- <p>test works!</p> -->
+
+<!-- <table class="text-white text-center table">
+    <tr>
+        <th>UserID</th>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Body</th>
+    </tr>
+    <tr *ngFor="let postObj of posts" class="p-3">
+        <td class="p-3">{{postObj.userId}}</td>
+        <td class="p-3">{{postObj.id}}</td>
+        <td class="p-3">{{postObj.title}}</td>
+        <td class="p-3">{{postObj.body}}</td>
+    </tr>
+</table> -->
+
+<table class="text-white text-center table">
+    <thead>
+        <tr>
+        <th>UserID</th>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Body</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let postObj of users.data" class="p-3">
+            <td class="p-3">{{postObj.id}}</td>
+            <td class="p-3">{{postObj.first_name}}</td>
+            <td class="p-3">{{postObj.last_name}}</td>
+            <td class="p-3"><img [src]=postObj.avatar alt=""></td>
+        </tr>
+    </tbody>
+</table>

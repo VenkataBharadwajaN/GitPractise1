@@ -14,6 +14,8 @@ import { MobilesComponent } from './mobiles/mobiles.component';
 import { BikesComponent } from './bikes/bikes.component';
 import { TelevisionsComponent } from './televisions/televisions.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { TestComponent } from './test/test.component';
+import { Test1Component } from './test1/test1.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     BikesComponent,
     TelevisionsComponent,
     PageNotFoundComponent,
+    TestComponent,
+    Test1Component,
   ],
   imports: [
     BrowserModule,

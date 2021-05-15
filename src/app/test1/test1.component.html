@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col" *ngFor="let profile of profiles.data">
+            <div class="card mt-3 shadow">
+              <img [src]=profile.avatar class="card-img-top" alt="Image" width="200px" height="200px">
+              <div class="card-body bg-success">
+                <p class="card p-1">{{profile.id}}</p>
+                <p class="card p-1">{{profile.email}}</p>
+                <p class="card p-1">{{profile.first_name}}</p>
+                <p class="card p-1">{{profile.last_name}}</p>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>

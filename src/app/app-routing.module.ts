@@ -9,6 +9,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ProductComponent } from './product/product.component';
 import { RegisterComponent } from './register/register.component';
 import { TelevisionsComponent } from './televisions/televisions.component';
+import { TestComponent } from './test/test.component';
+import { Test1Component } from './test1/test1.component';
 
 const routes: Routes = [
   { path:'home',component:HomeComponent },
@@ -20,6 +22,12 @@ const routes: Routes = [
   },
   {
     path:'contactus',component:ContactusComponent
+  },
+  {
+    path:'test',component:TestComponent
+  },
+  {
+    path:'test1',component:Test1Component
   },
   {
     path:'products',component:ProductComponent,children:[
